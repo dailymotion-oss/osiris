@@ -90,6 +90,7 @@ func (a *activator) updateIndex() {
 		}
 
 		svcDNSNames := []string{
+			fmt.Sprintf("%s", svc.Name),
 			fmt.Sprintf("%s.%s", svc.Name, svc.Namespace),
 			fmt.Sprintf("%s.%s.svc", svc.Name, svc.Namespace),
 			fmt.Sprintf("%s.%s.svc.cluster", svc.Name, svc.Namespace),
